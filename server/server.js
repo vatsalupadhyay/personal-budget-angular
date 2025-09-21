@@ -1,11 +1,11 @@
-// Budget API
-
 const express = require('express');
 const cors = require('cors');
 const app = express();
 const port = 3000;
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:4200', 
+}));
 
 const budget = {
     myBudget: [
@@ -24,11 +24,16 @@ const budget = {
     ]
 };
 
-
 app.get('/budget', (req, res) => {
+    console.log('Budget data requested');
     res.json(budget);
 });
 
+app.get('/health', (req, res) => {
+    res.json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
 app.listen(port, () => {
-    console.log(`API served at http://localhost:${port}`);
+    console.log(`✅ API served at http://localhost:${port}`);
+   
 });
