@@ -28,12 +28,15 @@
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/platform-server": "^20.3.0",
-    "@angular/router": "^20.3.0",
+    "@angular/router": "^20.3.1",
     "@angular/ssr": "^20.3.2",
+    "@types/d3": "^7.4.3",
     "chart.js": "^4.5.0",
+    "d3": "^7.9.0",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "zone.js": "^0.15.1"
   },
   "devDependencies": {
     "@angular/build": "^20.3.2",
